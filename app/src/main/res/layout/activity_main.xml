@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#F5F6F8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Título Principal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌱 AgroRiegoIoT"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#2E7D32"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Sección de Autenticación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acceso al Sistema"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="10dp"
+                android:textColor="#333333" />
+
+            <EditText
+                android:id="@+id/etUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Usuario (ej: admin)"
+                android:inputType="text"
+                android:paddingHorizontal="12dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_marginBottom="10dp" />
+
+            <EditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Contraseña (ej: 1234)"
+                android:inputType="textPassword"
+                android:paddingHorizontal="12dp"
+                android:background="@android:drawable/editbox_background_normal"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Iniciar Sesión"
+                android:backgroundTint="#2E7D32"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <!-- Sección de Control y Conexión -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:drawable/dialog_holo_light_frame"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnConectar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="Conectar Bluetooth HC-05"
+                android:backgroundTint="#1976D2"
+                android:textColor="@android:color/white"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tvEstadoConexion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado: Desconectado"
+                android:textStyle="bold"
+                android:textSize="13sp"
+                android:textColor="#D32F2F"
+                android:gravity="center"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tvEstadoTierra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Estado: Sistema Normal"
+                android:textSize="15sp"
+                android:textColor="#333333"
+                android:gravity="center"
+                android:layout_marginBottom="16dp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchModo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activar Modo Automático"
+                android:textSize="16sp"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnAbrir"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Abrir Válvula"
+                    android:backgroundTint="#388E3C"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="6dp" />
+
+                <Button
+                    android:id="@+id/btnCerrar"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="Cerrar Válvula"
+                    android:backgroundTint="#D32F2F"
+                    android:textColor="@android:color/white"
+                    android:layout_marginLeft="6dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
